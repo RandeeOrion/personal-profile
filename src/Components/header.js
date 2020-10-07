@@ -1,21 +1,17 @@
 import React from 'react';
-import { Link, BrowserRouter as Router } from 'react-router-dom';
-// import Navbar from 'react-bootstrap/Navbar';
-// import { Nav, Dropdown } from 'react-bootstrap';
-// import DropdownButton from 'react-bootstrap/DropdownButton'
-
-// need to figure out how to link with browser router <-- checkout Clayton's repo
+import { NavLink, BrowserRouter as Router  } from 'react-router-dom';
 
 export default function Header() {
 
   return (
-    <>
-    <h1>Randee Orion</h1>
+    < div className='header'>
+    <h1 id='name'>Randee Orion</h1>
         <Router>
-            <Link to='/'>Home</Link>
-            <Link to='/portfolio'>Portfolio</Link>
-            <Link to='/bio'>Bio</Link>  
-          </Router>
-    </>
+            <NavLink to='/' className='siteLink'> Home </NavLink>
+            <NavLink to='/bio' className='siteLink'> Bio </NavLink> 
+            <NavLink to='/contact' className='siteLink'> Contact Me </NavLink>
+             
+        </Router>
+    </div>
   )
 }
