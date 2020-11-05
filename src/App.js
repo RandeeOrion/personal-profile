@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import Bio from './Components/bio.js';
@@ -11,16 +11,16 @@ import '../src/styles/styles.sass'
 
 function App() {
   return (
+    <Router>
     <div className="App">
-       < Header />
-      <BrowserRouter>
+       < Header pageWrapId={"page-wrap"} outerContainerId={"App"}/>
         <Route exact path='/'>
           < Projects />
         </Route>
         <Route path='/bio' component={Bio} /> 
         <Route path='/contact' component={Contact}/>
-      </BrowserRouter>
-    </div>
+      </div>
+    </Router>
   );
 }
 
