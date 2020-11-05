@@ -1,21 +1,19 @@
 import React from 'react';
-import { Link, BrowserRouter as Router } from 'react-router-dom';
-// import Navbar from 'react-bootstrap/Navbar';
-// import { Nav, Dropdown } from 'react-bootstrap';
-// import DropdownButton from 'react-bootstrap/DropdownButton'
+import NavItem from './navItem.js'
 
-// need to figure out how to link with browser router <-- checkout Clayton's repo
-
-export default function Header() {
+export default function Header(props) {
 
   return (
-    <>
-    <h1>Randee Orion</h1>
-        <Router>
-            <Link to='/'>Home</Link>
-            <Link to='/portfolio'>Portfolio</Link>
-            <Link to='/bio'>Bio</Link>  
-          </Router>
-    </>
+    < div className='header' style={{display: 'flex', justifyContent:'space-between'}}>
+      <div>
+        <h1 id='name'>Randee Orion</h1>
+        <h4 id='dev'>Full Stack Software Developer</h4>
+      </div>
+      <nav id='nav'>
+        <NavItem  item='Home' link='/' />
+        <NavItem item='Bio' link='/bio' />
+        <NavItem item='Contact Me' link='/contact' />
+      </nav>
+    </div>
   )
 }
