@@ -8,7 +8,7 @@ import GitHub from '../images/githubLogo.png'
 export default function Contact() {
   return(
     <div className='socialLinks'>
-      <p id='contactP'>Looking for a fullstack, frumpy dev for a project, contract or fulltime? You can find me at any of the links below. Looking forward to working with you!</p>
+      <p id='contactP'>Looking for a fullstack, entrepreneurial minded dev that has a rich and diverse background for a project or fulltime? You can find me at any of the links below. Looking forward to working with you!</p>
       <a href="https://twitter.com/FrumpyDev" target="_blank">
         <img src={Twitter} alt="TwitterLogo" className="logo" id="twitter" />
       </a>
